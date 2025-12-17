@@ -246,7 +246,14 @@ const TarotTab = () => {
                                 }}
                             >
                                 {selectedCard && (
-                                    <TarotCardFace card={selectedCard} className="w-full h-full" />
+                                    <div style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        transform: isReversed ? 'rotate(180deg)' : 'none',
+                                        transition: 'transform 0.3s'
+                                    }}>
+                                        <TarotCardFace card={selectedCard} className="w-full h-full" />
+                                    </div>
                                 )}
                             </div>
                         </div>
